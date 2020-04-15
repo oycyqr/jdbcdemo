@@ -1,13 +1,15 @@
 package com.oycbest.jdbcdemo.domain;
 
 
+import java.io.Serializable;
+
 /**
  * @author oyc
  * @Description:用户实体类
  * @date 2018/7/8 22:51
  */
 
-public class User{
+public class User implements Serializable {
 
 	//用户id
 	private String id;
@@ -51,5 +53,15 @@ public class User{
 
 	public void setSex(String sex) {
 		this.sex = sex;
+	}
+
+	@Override
+	public String toString() {
+		return "User{" +
+				"id='" + id + '\'' +
+				", name='" + name + '\'' +
+				", age='" + age + '\'' +
+				", sex='" + sex + '\'' +
+				'}';
 	}
 }
